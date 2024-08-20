@@ -18,14 +18,14 @@ const Home = () => {
     });
 
     heroImageReveal.current = gsap
-      .timeline({ paused: true })
-      .from(".hero-img", {
-        y: "1000",
-        rotate: -10,
-        duration: 1,
-        ease: "power3.out",
-        delay: 0.75,
-      });
+    .timeline({ paused: true })
+    .from(".hero-img", {
+      y: "1000",
+      rotate: 0, 
+      duration: 1,
+      ease: "power3.out",
+      delay: 0.75,
+    });
 
     heroCopyReveal.current.play();
     heroImageReveal.current.play();
@@ -57,12 +57,7 @@ const Home = () => {
         </div>
       </div>
     </section>
-    <section>
-      <h2>Trabajos</h2>
-    </section>
-    </div>
-   
-    
+    </div>   
   );
 };
 

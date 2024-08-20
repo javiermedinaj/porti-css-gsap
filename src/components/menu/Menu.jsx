@@ -11,7 +11,7 @@ import LinkPreviewImg3 from "../../assets/images/medina/project-1.jpg";
 const Menu = () => {
   const menuLinks = [
     { path: "/about", label: "About" },
-    { path: "/works", label: "Work" },
+    { path: "/works", label: "Projects" },
     { path: "/contact", label: "Contact" },
   ];
 

@@ -9,14 +9,14 @@ const Footer = () => {
         
         <div className="footer-col">
           <div className="footer-item">
-            <a href="#">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/javiermedinaj/" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
        
           <div className="footer-item">
-            <a href="#">GitHub</a>
+            <a href="https://github.com/javiermedinaj" target="_blank" rel="noreferrer">GitHub</a>
           </div>
           <div className="footer-item">
-            <a href="#">Instagram</a>
+            <a href="https://www.instagram.com/medinajavierj/" target="_blank" rel="noreferrer">Instagram</a>
           </div>
         </div>
       </div>

@@ -23,7 +23,6 @@
 }
 
 .about-intro h2 {
-  text-indent: 80px;
   margin: 2em 0;
 }
 
@@ -139,9 +138,6 @@
 @media (max-width: 900px) {
   .about-row {
     flex-direction: column;
-  }
-  .about-intro h2 {
-    text-indent: 100px;
   }
 
   .about-intro-copy,

@@ -216,8 +216,7 @@ const Works = () => {
         >
           <Marquee speed={160}>
             <h2>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae,
-              odit?
+            Desarrollador Frontend con experiencia en React, GSAP, framer motion y animaciones web
             </h2>
           </Marquee>
         </div>

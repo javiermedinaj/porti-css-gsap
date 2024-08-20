@@ -5,25 +5,26 @@ import Faq from "react-faq-component";
 import Marquee from "react-fast-marquee";
 import MagneticButton from "../../components/magneticbutton/MagneticButton";
 import PortraitImg from "../../assets/images/medina/me.jpg";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const data = {
     title: "",
     rows: [
       {
-        title: "What type of works do you take on?",
+        title: "¿Qué servicios ofreces?",
         content:
-          "I specialize in web interaction and animation design, focusing on creating engaging and dynamic user experiences for websites and web applications. My work encompasses a range of projects, including but not limited to interactive web animations, UI/UX design, motion graphics for online platforms, and custom animations for brand storytelling. I am passionate about bringing brands to life through immersive digital experiences and work with clients across Tech, Education, Entertainment, and eCommerce industries.",
+          "Me enfoco en crear interfaces de usuario intuitivas utilizando React y he trabajado con técnicas de web scraping en Python. Estoy en constante aprendizaje y busco oportunidades para mejorar mis habilidades en el desarrollo web y backend.",
       },
       {
-        title: "How do you charge for projects?",
+        title: "¿Cuales son mis objetivos?",
         content:
-          "My project pricing is tailored to the specific needs and scope of each project. I typically offer a project-based fee after a thorough discussion about the project's requirements, timelines, and expected deliverables. This approach allows for a clear understanding of the project costs upfront. For larger or more complex projects, I may also work with a phased payment schedule, ensuring transparency and alignment with project milestones.",
+          "Brindar una experiencia de usuario unica y dinámica a través de la creación de una solución de software de alto rendimiento.",
       },
       {
-        title: "What is your hourly rate?",
+        title: "¿Cómo puedo contactarte?",
         content:
-          "While I primarily work with project-based pricing, I understand that some projects may require an hourly or day rate, especially during the initial phases or for ongoing support. My hourly rate is $XXX, reflecting my expertise and the value I bring to each project. For long-term engagements or larger projects, I am open to discussing a customized rate or retainer model that aligns with the client's needs and project goals.",
+          "Puedes contactarme a través de mi correo electrónico javier_j_medina@hotmail.com o por la pagina de Contact.",
       },
     ],
   };
@@ -34,18 +35,19 @@ const About = () => {
         <section className="about-marquee">
           <Marquee direction="left" speed={50}>
             <h2>
-              Transforming Your Digital Presence with Unforgettable Web
-              Animations.
+              Elevando tu presencia digital con soluciones innovadoras en
+              desarrollo web.
             </h2>
           </Marquee>
         </section>
 
         <section className="about-intro">
           <h2>
-            Cura Futuri is an innovative Web Interaction Animation Designer,
-            based in the vibrant city of Toronto, specializing in bringing
-            digital experiences to life. With a keen eye for detail and a
-            passion for pushing the boundaries of web animation.
+            Soy un desarrollador de software en formación, con conomientos en
+            JavaScript, Python y Java. Apasionado por crear experiencias
+            digitales intuitivas y eficientes. Busco una oportunidad profesional
+            para aplicar mis conocimientos y crecer en el campo de la
+            tecnología.
           </h2>
         </section>
 
@@ -58,17 +60,17 @@ const About = () => {
             </div>
             <div className="about-col">
               <h3>
-                Cura Futuri partners with a broad spectrum of clients in Tech,
-                Education, Entertainment, and eCommerce, crafting immersive web
-                animations and interactive designs for brands of all shapes and
-                sizes. With a focus on Branding, User Interface (UI) Design, and
-                Motion Graphics, Cura brings a unique blend of creativity and
-                technical precision to every project.
+                Colaboro con equipos de desarrollo en proyectos académicos y
+                personales, enfocados en aplicaciones web utilizando tecnologías
+                como React.js y Spring Boot. Mi enfoque abarca desde el diseño
+                de interfaces hasta la implementación de funcionalidades
+                backend, siempre buscando integrar metodologías ágiles para
+                maximizar la eficiencia y la calidad del producto final.
               </h3>
-              <h3 style={{ textIndent: "100px" }}>
-                Renowned for pioneering in the field of web interaction design,
-                Cura has been nominated for several industry awards, including
-                the prestigious Webby Awards for innovative web animation.
+              <h3>
+                Estoy comprometido con el aprendizaje continuo y la aplicación
+                de nuevas tecnologías, lo que me permite adaptarme rápidamente a
+                los cambios en el entorno tecnológico.
               </h3>
             </div>
           </div>
@@ -78,19 +80,15 @@ const About = () => {
           <div className="about-row">
             <div className="about-col">
               <p>
-                <span>Contact</span>
+                <span>Contacto</span>
               </p>
               <br />
               <br />
               <p>
-                <span>Email: </span> <span>hello@curafuturi.com</span>
+                <span>Email: </span> <span>javier_j_medina@hotmail.com</span>
               </p>
               <p>
-                <span>Phone: </span> <span>+1 416 555 1234</span>
-              </p>
-              <p>
-                <span>Address: </span>{" "}
-                <span>789 Town Way, Toronto M1A 2B3</span>
+                <span>Ubicación: </span> <span>Buenos Aires, Argentina</span>
               </p>
 
               <br />
@@ -99,7 +97,7 @@ const About = () => {
             </div>
             <div className="about-col">
               <div className="about-portrait-img">
-                <img src={PortraitImg} alt="" />
+                <img src={PortraitImg} alt="Tu retrato" />
               </div>
 
               <div className="faqs">
@@ -110,21 +108,16 @@ const About = () => {
         </section>
         <section className="about-contact">
           <div className="about-contact-copy">
-            <h2>Powered by Your Creativity</h2>
+            
             <p>
+            <Link to="/contact">
               <span>
-                For a CV, portfolio, or inquiries, please reach out to
-                hello@curafuturi.com
+                Para consultas, colaboraciones o más información, no dudes en
+                contactarme 
               </span>
+              </Link>
             </p>
-
             <br />
-            <p>
-              <span>+1 416 555 1234</span>
-            </p>
-            <p>
-              <span>Instagram • Twitter</span>
-            </p>
           </div>
         </section>
 

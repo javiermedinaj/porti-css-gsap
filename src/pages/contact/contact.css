@@ -55,7 +55,36 @@
   }
   
 
+  .btn-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 25px; 
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
   
+  .btn-submit:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .thanks-message {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+  }
 
   section.contact-socials {
     padding-bottom: 4em;
