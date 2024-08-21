@@ -4,6 +4,7 @@ import Transition from "../../components/transition/Transition";
 import PortraitImg from "../../assets/images/medina/me.jpg";
 import { gsap } from "gsap";
 
+
 const Home = () => {
   const heroCopyReveal = useRef();
   const heroImageReveal = useRef();
@@ -12,19 +13,19 @@ const Home = () => {
     heroCopyReveal.current = gsap.timeline({ paused: true }).to("h1", {
       top: "0",
       duration: 1,
-      stagger: 0.2,
+      stagger: 0.1,
       ease: "power3.out",
-      delay: 0.35,
+      delay: 0.1,
     });
 
     heroImageReveal.current = gsap
     .timeline({ paused: true })
     .from(".hero-img", {
       y: "1000",
-      rotate: 0, 
+      rotate: "110",
       duration: 1,
-      ease: "power3.out",
-      delay: 0.75,
+      // ease: "power3.out",
+      delay: 0.1,
     });
 
     heroCopyReveal.current.play();
