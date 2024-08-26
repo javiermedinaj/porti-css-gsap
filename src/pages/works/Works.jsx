@@ -5,11 +5,7 @@ import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import MagneticButton from "../../components/magneticbutton/MagneticButton";
 import { gsap } from "gsap";
-import ProjectImg from "../../assets/images/medina/fumot.png";
-import ProjectImg2 from "../../assets/images/medina/cafe.png";
-import ProjectImg3 from "../../assets/images/medina/iphone.jpg";
-import ProjectImg4 from "../../assets/images/medina/Qr-generator.png";
-import ProjectImg5 from "../../assets/images/medina/Weeding.png";
+import projects from "../../data/data.json";
 
 const Works = () => {
   const workCopyReveal = useRef();
@@ -26,20 +22,10 @@ const Works = () => {
     workCopyReveal.current.play();
   }, []);
 
-  const projectPreivewImages = [
-    ProjectImg,
-    ProjectImg2,
-    ProjectImg3,
-    ProjectImg4,
-    ProjectImg5,
-  ];
-
   let lastHoveredIndex = null;
   const projectPreviewContainer = document.querySelector(".project-preview");
 
   const handleResetPreivew = () => {
-    const projectPreviewContainer = document.querySelector(".project-preview");
-
     gsap.to(".project-preview img", {
       opacity: 0,
       duration: 0.3,
@@ -50,13 +36,11 @@ const Works = () => {
   };
 
   const handleMouseOver = (index) => {
-    const projectPreviewContainer = document.querySelector(".project-preview");
-
     if (index !== lastHoveredIndex) {
       console.log(`Hovered ${index}`);
 
       const img = document.createElement("img");
-      img.src = projectPreivewImages[index - 1];
+      img.src = projects[index - 1].imgSrc;
       projectPreviewContainer.appendChild(img);
 
       gsap.to(img, {
@@ -112,100 +96,23 @@ const Works = () => {
         </section>
 
         <section className="project-list">
-          <div className="project-list-row">
-            <div className="project-list-col">
-              <div
-                className="project-item"
-                onMouseOver={() => handleMouseOver(1)}
-              >
-                <div className="project-img">
-                   <Link to="/">
-                    <img src={ProjectImg} alt="" />
-                  </Link> 
-                </div>
-                <div className="project-copy copy-pos-right">
-                 
-                </div>
-              </div>
-            </div>
-            <div className="project-list-col whitespace-col"></div>
-          </div>
-
-          <div className="project-list-row">
-            <div className="project-list-col whitespace-col"></div>
-            <div className="project-list-col">
-              <div
-                className="project-item"
-                onMouseOver={() => handleMouseOver(2)}
-              >
-                <div className="project-img">
-                  <Link to="/">
-                    <img src={ProjectImg2} alt="" />
-                  </Link>
-                </div>
-                <div className="project-copy copy-pos-left">
-                 
+          {projects.map((project, index) => (
+            <div className="project-list-row" key={project.id}>
+              <div className={`project-list-col ${index % 2 === 0 ? "" : "whitespace-col"}`}>
+                <div
+                  className="project-item"
+                  onMouseOver={() => handleMouseOver(project.id)}
+                >
+                  <div className="project-img">
+                    <Link to={project.link}>
+                      <img src={project.imgSrc} alt={project.name} />
+                    </Link>
+                  </div>
+              
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="project-list-row">
-            <div className="project-list-col">
-              <div
-                className="project-item"
-                onMouseOver={() => handleMouseOver(3)}
-              >
-                <div className="project-img">
-                  <Link to="/">
-                    <img src={ProjectImg3} alt="" />
-                  </Link>
-                </div>
-                <div className="project-copy copy-pos-right">
-                 
-                </div>
-              </div>
-            </div>
-            <div className="project-list-col whitespace-col"></div>
-          </div>
-
-          <div className="project-list-row">
-            <div className="project-list-col whitespace-col"></div>
-            <div className="project-list-col">
-              <div
-                className="project-item"
-                onMouseOver={() => handleMouseOver(4)}
-              >
-                <div className="project-img">
-                  <Link to="/">
-                    <img src={ProjectImg4} alt="" />
-                  </Link>
-                </div>
-                <div className="project-copy copy-pos-left">
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="project-list-row">
-            <div className="project-list-col">
-              <div
-                className="project-item"
-                onMouseOver={() => handleMouseOver(5)}
-              >
-                <div className="project-img">
-                  <Link to="/">
-                    <img src={ProjectImg5} alt="" />
-                  </Link>
-                </div>
-                <div className="project-copy copy-pos-right">
-                 
-                </div>
-              </div>
-            </div>
-            <div className="project-list-col whitespace-col"></div>
-          </div>
+          ))}
         </section>
 
         <div
@@ -216,7 +123,7 @@ const Works = () => {
         >
           <Marquee speed={160}>
             <h2>
-            Desarrollador Frontend con experiencia en React, GSAP, framer motion y animaciones web
+              Desarrollador Frontend con experiencia en React, GSAP, framer motion y animaciones web
             </h2>
           </Marquee>
         </div>

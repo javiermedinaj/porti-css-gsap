@@ -8,6 +8,12 @@
     pointer-events: none;
   }
   
+  .logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    
+  }
   /* menu-bar */
   .menu-bar {
     position: fixed;
@@ -22,7 +28,7 @@
   }
   
   .menu-logo a {
-    font-family: "PP Monument Extended";
+  
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
@@ -141,7 +147,7 @@
   .menu-link-item .menu-link-item-holder a {
     position: relative;
     color: rgba(255, 255, 255, 0.35);
-    font-family: "Rosseta";
+  
     font-size: 60px;
     font-weight: 50;
     text-transform: uppercase;

@@ -1,0 +1,106 @@
+/* skills */
+.skills {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.skills-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 2em;
+  margin-bottom: 2em;
+  flex-wrap: wrap; /* Permite que las filas se ajusten en dispositivos móviles */
+}
+
+.skills-row:nth-child(1) {
+  justify-content: center; /* Centra el texto "Skills" */
+}
+
+.skills-row:nth-child(1) p {
+  font-size: var(--font-small);
+}
+
+.skill {
+  position: relative;
+  flex: 1;
+  aspect-ratio: 8/5;
+  background-color: var(--color-accent);
+  padding: 1em;
+  overflow: hidden;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 125%;
+  height: 125%;
+  background: var(--color-accent);
+  mix-blend-mode: difference;
+  clip-path: circle(0% at 50% 50%);
+  transition: all 0.5s;
+}
+
+.skill:hover::after {
+  clip-path: circle(100% at 50% 50%);
+}
+
+.skill p {
+  color: var(--color-bg);
+  text-align: center;
+}
+
+.skill p:nth-child(2) {
+  font-size: var(--font-tiny);
+  padding-top: 1em;
+  line-height: 120%;
+}
+
+.skill p:nth-child(3) {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+}
+
+.skill svg {
+  margin-bottom: 0.5em;
+  color: var(--color-bg); /* Asegúrate de que los iconos tengan el color adecuado */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 900px) {
+  .skills-row {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .skill {
+    aspect-ratio: auto;
+    padding: 1em;
+  }
+
+  .skill p:nth-child(2) {
+    font-size: var(--font-small);
+  }
+
+  .skill p:nth-child(3) {
+    position: static;
+    margin-top: 1em;
+  }
+
+  .skill svg {
+    width: 48px; /* Ajusta el tamaño del icono */
+    height: 48px;
+  }
+}

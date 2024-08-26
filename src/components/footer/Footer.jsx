@@ -1,26 +1,46 @@
 import React from "react";
+import {
+  FaLinkedinIn,
+  FaInstagram,
+  FaGithub,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { MdOutlineMail } from "react-icons/md";
 
 import "./footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer>
       <div className="container">
-        
-        <div className="footer-col">
-          <div className="footer-item">
-            <a href="https://www.linkedin.com/in/javiermedinaj/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <div className="footer-header">
+          <p>Please contact me in any way you like</p>
+        </div>
+        <div className="footer-row">
+          <div className="footer-col">
+            <p>Social</p>
+            <div className="socials">
+              <FaLinkedinIn href="" />
+              <FaInstagram href="" />
+              <FaGithub href="" />
+            </div>
           </div>
-       
-          <div className="footer-item">
-            <a href="https://github.com/javiermedinaj" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
-          <div className="footer-item">
-            <a href="https://www.instagram.com/medinajavierj/" target="_blank" rel="noreferrer">Instagram</a>
+          <div className="footer-col">
+            <p>Contact</p>
+           <div className="socials">
+           <a href="mailto:example@gmail.com">
+            <MdOutlineMail
+            />
+            </a>
+            <a href="https://wa.link/qhouz7">
+            <FaWhatsapp
+            />
+            </a>
+           </div>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

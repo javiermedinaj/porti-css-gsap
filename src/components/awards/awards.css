@@ -1,0 +1,77 @@
+.awards-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6em;
+  }
+  
+  .awards-header-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .awards-header-row:nth-child(2) {
+    padding-left: 8em;
+  }
+  
+  .awards-header-row:nth-child(3) {
+    padding-left: 24em;
+  }
+  
+  .awards .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .award {
+    width: 100%;
+    display: flex;
+    padding: 1.5em 0;
+    border-bottom: 2px dashed var(--color-accent);
+  }
+  
+  .award:nth-child(1) p {
+    font-size: var(--font-tiny);
+  }
+  
+  .award p:nth-child(1) {
+    flex: 3;
+  }
+  
+  .award p:nth-child(2) {
+    flex: 2;
+  }
+  
+  .award p:nth-child(3) {
+    flex: 2;
+  }
+  
+  .award p:nth-child(4) {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+/* magnetic btn */
+.award-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 0;
+  }
+  
+  @media (max-width: 900px) {
+    .awards-header {
+        margin-top: 0em;
+      }
+    
+      .awards-header-row {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .awards-header-row:nth-child(2),
+      .awards-header-row:nth-child(3) {
+        padding-left: 0em;
+      }
+  }

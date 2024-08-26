@@ -12,7 +12,6 @@ const Menu = () => {
   const menuLinks = [
     { path: "/about", label: "About" },
     { path: "/works", label: "Projects" },
-    { path: "/contact", label: "Contact" },
   ];
 
   const menuContainer = useRef();
@@ -135,14 +134,14 @@ const Menu = () => {
     <div className="menu-container" ref={menuContainer}>
       <div className="menu-bar">
         <div className="menu-logo" onClick={closeMenu}>
-          <Link to="/">Medina</Link>
+          <Link to="/"><img src="/j-removebg-preview.png" className="logo-img" alt="" /></Link>
         </div>
         <div className="menu-actions">
-          <div className="contact-btn">
+          {/* <div className="contact-btn">
             <div className="btn">
               <Link to="/contact">Contact</Link>
             </div>
-          </div>
+          </div> */}
           <div className="menu-toggle">
             <button className="hamburger-icon" onClick={toggleMenu}></button>
           </div>
