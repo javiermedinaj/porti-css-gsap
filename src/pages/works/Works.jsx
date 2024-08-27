@@ -9,6 +9,7 @@ import projects from "../../data/data.json";
 
 const Works = () => {
   const workCopyReveal = useRef();
+  const projectPreviewContainer = useRef(null);
 
   useEffect(() => {
     workCopyReveal.current = gsap.timeline({ paused: true }).to("h1", {
@@ -23,7 +24,6 @@ const Works = () => {
   }, []);
 
   let lastHoveredIndex = null;
-  const projectPreviewContainer = document.querySelector(".project-preview");
 
   const handleResetPreivew = () => {
     gsap.to(".project-preview img", {
@@ -41,13 +41,13 @@ const Works = () => {
 
       const img = document.createElement("img");
       img.src = projects[index - 1].imgSrc;
-      projectPreviewContainer.appendChild(img);
+      projectPreviewContainer.current.appendChild(img);
 
       gsap.to(img, {
         opacity: 1,
         duration: 0.3,
         onComplete: () => {
-          const allPrevImages = projectPreviewContainer.querySelectorAll("img");
+          const allPrevImages = projectPreviewContainer.current.querySelectorAll("img");
 
           if (allPrevImages.length > 1) {
             Array.from(allPrevImages)
@@ -79,7 +79,7 @@ const Works = () => {
 
   return (
     <div className="works page">
-      <div className="project-preview"></div>
+      <div className="project-preview" ref={projectPreviewContainer}></div>
       <div className="container">
         <section
           className="works-hero"

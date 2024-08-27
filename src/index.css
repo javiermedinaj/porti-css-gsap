@@ -1,11 +1,5 @@
-@font-face {
-  font-family: 'Primary';
-  src: url('./fonts/questrial.woff2') format('woff2'),
-      url('./fonts/questrial.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+
+
 :root {
   --color-bg: #0d0d11;
   --color-bg-light: #131317;
@@ -27,7 +21,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--color-bg);
-  font-family: 'Primary';
+  font-family: 'Primary', sans-serif;
   overflow-x: hidden;
 }
 
