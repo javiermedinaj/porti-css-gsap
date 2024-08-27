@@ -2,11 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import "./menu.css";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-
-import DefaultPreviewImg from "../../assets/images/medina/default.jpg";
 import LinkPreviewImg1 from "../../assets/images/medina/project-3.jpg";
 import LinkPreviewImg2 from "../../assets/images/medina/project-4.jpg";
-import LinkPreviewImg3 from "../../assets/images/medina/project-1.jpg";
 
 const Menu = () => {
   const menuLinks = [
@@ -73,11 +70,7 @@ const Menu = () => {
   useEffect(() => {
     const previewContainer = document.querySelector(".link-preview-img");
     const menuLinkItems = document.querySelectorAll(".menu-link-item");
-    const linkImages = [
-      LinkPreviewImg1,
-      LinkPreviewImg2,
-      LinkPreviewImg3,
-    ];
+    const linkImages = [LinkPreviewImg1, LinkPreviewImg2];
 
     let lastHoveredIndex = null;
 
@@ -134,7 +127,9 @@ const Menu = () => {
     <div className="menu-container" ref={menuContainer}>
       <div className="menu-bar">
         <div className="menu-logo" onClick={closeMenu}>
-          <Link to="/"><img src="/j-removebg-preview.png" className="logo-img" alt="" /></Link>
+          <Link to="/">
+            <img src="/j-removebg-preview.png" className="logo-img" alt="" />
+          </Link>
         </div>
         <div className="menu-actions">
           {/* <div className="contact-btn">
@@ -149,8 +144,6 @@ const Menu = () => {
       </div>
       <div className="menu">
         <div className="link-preview-img">
-          <img src={DefaultPreviewImg} alt="" />
-
           <div className="bind-new-img">
             <img src={LinkPreviewImg1} alt="" />
           </div>

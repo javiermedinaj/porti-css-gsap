@@ -3,35 +3,35 @@
     "id": 1,
     "name": "Fumot",
     "stack": "React.js",
-    "imgSrc": "/src/assets/images/medina/fumot.png",
+    "imgSrc": "/fumot.png",
     "link": "/"
   },
   {
     "id": 2,
     "name": "Café",
     "stack": "React.js",
-    "imgSrc": "/src/assets/images/medina/cafe.png",
+    "imgSrc": "/cafe.png",
     "link": "/"
   },
   {
     "id": 3,
     "name": "iPhone",
     "stack": "React.js",
-    "imgSrc": "/src/assets/images/medina/iphone.jpg",
+    "imgSrc": "/iphone.jpg",
     "link": "/"
   },
   {
     "id": 4,
     "name": "QR Generator",
     "stack": "React.js",
-    "imgSrc": "/src/assets/images/medina/Qr-generator.png",
+    "imgSrc": "/Qr-generator.png",
     "link": "/"
   },
   {
     "id": 5,
     "name": "Weeding",
     "stack": "React.js",
-    "imgSrc": "/src/assets/images/medina/Weeding.png",
+    "imgSrc": "/Weeding.png",
     "link": "/"
   }
 ]
