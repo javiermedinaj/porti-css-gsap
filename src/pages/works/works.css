@@ -91,22 +91,10 @@
   }
   
   @media (max-width: 900px) {
-    .project-list-row {
-      width: 100%;
-    }
-  
-    .project-list-col.whitespace-col {
-      display: none;
-    }
-  
-    .project-copy.copy-pos-left,
-    .project-copy.copy-pos-right {
-      position: absolute;
-      width: 100%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
+    .project-img {
+      height: 300px;
+      border-radius: 10%;
+      overflow: hidden;
     }
   }
   

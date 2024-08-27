@@ -102,6 +102,7 @@ const Works = () => {
                 <div
                   className="project-item"
                   onMouseOver={() => handleMouseOver(project.id)}
+                  onClick={() => handleMouseOver(project.id)} // Add onClick for mobile
                 >
                   <div className="project-img">
                     <Link to={project.link}>
