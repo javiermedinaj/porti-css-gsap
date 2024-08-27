@@ -89,11 +89,12 @@
   }
   
   .work-copy-wrapper h1 {
+    margin-bottom: 2em;
     font-size: 50px;
     position: relative;
   }
   
-/* Ajustes generales para móviles */
+
 @media (max-width: 600px) {
   .works-hero {
     height: 60vh;
