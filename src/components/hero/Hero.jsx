@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import PortraitImg from "../../assets/images/medina/me.jpg";
 import { gsap } from "gsap";
 import "./hero.css";
 const Hero = () => {
@@ -28,7 +27,7 @@ const Hero = () => {
     <div>
       <section className="hero-section">
         <div className="hero-img">
-          <img src={PortraitImg} alt="Portrait" />
+          <img src="/me.jpg" alt="Portrait" />
         </div>
         <div className="hero-content">
           <div className="hero-copy">

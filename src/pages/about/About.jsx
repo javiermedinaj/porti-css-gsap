@@ -4,7 +4,6 @@ import Transition from "../../components/transition/Transition";
 import Faq from "react-faq-component";
 import Marquee from "react-fast-marquee";
 import MagneticButton from "../../components/magneticbutton/MagneticButton";
-import PortraitImg from "../../assets/images/medina/me.jpg";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -95,7 +94,7 @@ const About = () => {
             </div>
             <div className="about-col">
               <div className="about-portrait-img">
-                <img src={PortraitImg} alt="Tu retrato" />
+                <img src="/me.jpg" alt="Portrait" />
               </div>
 
               <div className="faqs">

@@ -14,6 +14,8 @@
     opacity: 1;
   }
   
+
+
   .project-preview img {
     position: absolute;
     top: 0;
@@ -51,6 +53,7 @@
   }
   
   .project-item .project-img {
+    object-fit: cover;
     height: 400px;
     overflow: hidden;
   }
@@ -90,11 +93,31 @@
     position: relative;
   }
   
-  @media (max-width: 900px) {
-    .project-img {
-      height: 300px;
-      border-radius: 10%;
-      overflow: hidden;
-    }
+/* Ajustes generales para móviles */
+@media (max-width: 600px) {
+  .works-hero {
+    height: 60vh;
+    padding-top: 5em;
   }
-  
+
+  .project-img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .project-list-row {
+    width: 90%;
+    margin: 0 auto 4em auto;
+  }
+
+  .project-copy h2 {
+    font-size: 40px;
+  }
+
+  .work-copy-wrapper h1 {
+    font-size: 30px;
+  }
+
+  .works-marquee h2 {
+    font-size: 20px;
+  }
+}
