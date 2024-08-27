@@ -1,6 +1,5 @@
 import React from 'react';
-import {  FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaPython, FaDocker } from 'react-icons/fa';
-import { SiTypescript} from 'react-icons/si';
+import {  FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaPython, FaDocker, FaJava } from 'react-icons/fa';
 import './skills.css';
 
 const Skills = () => {
@@ -25,8 +24,8 @@ const Skills = () => {
             <p>&mdash;</p>
           </div>
           <div className="skill">
-            <SiTypescript size={32} />
-            <p>TypeScript</p>
+            <FaJava size={32} />
+            <p>Java</p>
             <p>Writing robust and maintainable codebases.</p>
             <p>&mdash;</p>
           </div>

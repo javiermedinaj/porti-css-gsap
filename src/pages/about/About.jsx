@@ -45,9 +45,7 @@ const About = () => {
           <h2>
             Soy un desarrollador de software en formación, con conomientos en
             JavaScript, Python y Java. Apasionado por crear experiencias
-            digitales intuitivas y eficientes. Busco una oportunidad profesional
-            para aplicar mis conocimientos y crecer en el campo de la
-            tecnología.
+            digitales intuitivas y eficientes. 
           </h2>
         </section>
 
